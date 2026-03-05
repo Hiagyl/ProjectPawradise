@@ -1,6 +1,6 @@
 # 🐾 ProjectPawradise: Pet Management Dashboard
 
-ProjectPawradise is a full-stack MERN application designed for animal shelters and rescues to manage their residents. It features a redundant backend architecture using PM2 and MongoDB for high availability.
+ProjectPawradise is a full-stack MERN application designed for the use of Project Pawradise in managing campus pets. It features a redundant backend architecture using PM2 and MongoDB for high availability.
 
 ## 🚀 Key Features
 * **Pet Inventory:** Create, Read, Update, and Delete (CRUD) pet profiles.
