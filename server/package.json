@@ -20,6 +20,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "pm2": "^6.0.14"
   }
 }
