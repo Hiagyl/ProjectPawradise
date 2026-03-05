@@ -5,7 +5,6 @@ ProjectPawradise is a full-stack MERN application designed for animal shelters a
 ## 🚀 Key Features
 * **Pet Inventory:** Create, Read, Update, and Delete (CRUD) pet profiles.
 * **Redundant Architecture:** Backend clustering with PM2 for self-healing and zero downtime.
-* **Database Reliability:** Configured for MongoDB Replica Sets (Atlas or Local).
 * **Responsive UI:** Built with React and TanStack Query for smooth data fetching.
 
 ---
@@ -22,7 +21,7 @@ ProjectPawradise is a full-stack MERN application designed for animal shelters a
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/hiagyl/ProjectPawradise.git](https://github.com/hiagyl/ProjectPawradise.git)
+git clone https://github.com/Hiagyl/ProjectPawradise.git
 cd ProjectPawradise
 ```
 ### 2. Backend Setup
