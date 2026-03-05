@@ -1,0 +1,61 @@
+@baseUrl = http://localhost:5000/api/animals
+@host = http://localhost:5000
+
+### 0. Server Health Check
+GET {{host}}/status
+
+
+### 1. Create: Add "Luna" the Cat
+# @name createLuna
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "name": "Luna",
+    "species": "Cat",
+    "location": "Central Library Steps",
+    "status": "Healthy"
+}
+
+
+### 2. Create: Add "Shadow" the Dog
+# @name createShadow
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "name": "Shadow",
+    "species": "Dog",
+    "location": "Dormitory Alpha",
+    "status": "Under Treatment"
+}
+
+
+### 3. Read: Get All Animals
+GET {{baseUrl}}
+
+
+### 3.5 Update: Edit Luna's details (New Location & Status)
+# @name updateLuna
+@lunaId = {{createLuna.response.body._id}}
+PUT {{baseUrl}}/{{lunaId}}
+Content-Type: application/json
+
+{
+    "location": "Student Union Rooftops",
+    "status": "Adopted"
+}
+
+
+### 4. Soft Delete: Archive Luna
+PATCH {{baseUrl}}/{{lunaId}}/soft
+
+
+### 5. Verify Archive: Read All Animals again
+# Luna should be hidden now, only Shadow should appear.
+GET {{baseUrl}}
+
+
+### 6. Hard Delete: Permanently Remove Shadow
+@shadowId = {{createShadow.response.body._id}}
+DELETE {{baseUrl}}/{{shadowId}}

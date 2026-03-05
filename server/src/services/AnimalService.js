@@ -8,8 +8,9 @@ class AnimalService {
         return await Animal.find({ deletedAt: null });
     }
 
+    
     async update(id, data) {
-        return await Animal.findByIdAndUpdate(id, data, { new: true });
+        return await Animal.findByIdAndUpdate(id, data, { returnDocument: 'after', runValidators: true });
     }
 
     async softDelete(id) {
